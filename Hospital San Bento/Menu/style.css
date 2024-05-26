@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url(imagenes/hospiuu.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
+    background: #1D2951;
+    line-height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que la navegación se muestre sobre otros elementos */
+}
+
+label {
+    line-height: 80px;
+    font-size: 30px;
+    color: white;
+    font-weight: 200;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 6px 15px;
+    font-weight: 600;
+    background-color: rgb(55, 34, 246);
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background-color: rgb(248, 248, 252);
+    color: white;
+    transition: 0.5s;
+}
+
+.side-menu {
+    position: fixed;
+    background: #1D2951;
+    width: 250px;
+    height: 100%;
+    margin-top: 80px;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es muy largo */
+    transition: width 0.5s; /* Transición suave para el cambio de ancho */
+}
+
+.side-menu center img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 3px solid white;
+}
+
+.side-menu center h2 {
+    color: white;
+}
+
+.side-menu a {
+    display: block;
+    line-height: 60px;
+    transition: 0.5s;
+}
+
+.side-menu a:hover {
+    background: rgb(20, 54, 165);
+    padding-left: 20px;
+}
+
+.side-menu span {
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+}
+
+.side-menu i {
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+nav .menu-bar {
+    float: right;
+    margin-top: 20px;
+    display: none;
+    margin-right: 20px;
+}
+
+#menu {
+    display: none;
+}
+
+.side-menu .Logout {
+    display: none;
+}
+
+/* Estilos para submenús */
+.side-menu .has-submenu .sub-menu {
+    background: #1D2951; /* Fondo del submenú */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding-left: 0; /* Alineación con el menú principal */
+}
+
+.side-menu .has-submenu.active .sub-menu {
+    display: block; /* Mostrar submenú cuando está activo */
+}
+
+.side-menu .has-submenu .sub-menu li {
+    padding: 10px 20px; /* Espaciado para los elementos del submenú */
+    color: white; /* Color de texto para los elementos del submenú */
+    background: none; /* No hay fondo por defecto */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.side-menu .has-submenu .sub-menu li a {
+    color: white; /* Cambia el color del texto a blanco */
+    display: block; /* Asegura que el enlace ocupe todo el espacio del li */
+}
+
+.hospital-title {
+    color: white;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+    /* Ajustes para tablets y dispositivos pequeños */
+    .side-menu {
+        width: 200px; /* Menú más estrecho para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+    .side-menu {
+        width: 100%; /* Menú de ancho completo para pantallas muy pequeñas */
+    }
+
+    .side-menu a i {
+        font-size: 35px;
+    }
+
+    .side-menu a span {
+        display: none;
+    }
+
+    .side-menu center {
+        display: none;
+    }
+
+    .data {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para teléfonos móviles */
+    .side-menu {
+        width: 100%; /* Menú de ancho completo para pantallas muy pequeñas */
+    }
+
+    .side-menu a i {
+        font-size: 35px;
+    }
+
+    .side-menu a span {
+        display: none;
+    }
+
+    .side-menu center {
+        display: none;
+    }
+
+    .data {
+        margin-left: 0;
+    }
+}
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOSPITAL SAN BENITO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* CSS COMPLETO AQUÍ */
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu">
+    <nav>
+        <label for="menu" class="menu-bar">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="../user/usuario.php">Cerrar Sesion</a></li>
+        </ul>
+        <h1 class="hospital-title">HOSPITAL SAN BENITO</h1>
+    </nav>
+   
+    <div class="side-menu">
+        <center>
+            <img src="https://drive.google.com/thumbnail?id=12So_kwX64SfUCdIJYLp3VUlX1hvwK2Zs" alt="Perfil del Usuario">
+            <h2>Perfil del Usuario</h2>
+        </center>
+        <ul>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-user"></i><span>Mi Perfil</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../mi perfil/perfil usuario.php"><i class="fa fa-user"></i> Información Personal</a></li>
+                    <li><a href="../informacion seguro/seguro.php"><i class="fa fa-credit-card"></i> Seguros Medicos</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> Cambiar Foto</a></li>
+                    
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-archive"></i><span>Expediente Medico</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../Nuevo Paciente/index.php"><i class="fa fa-user"></i> Nuevo Paciente</a></li>
+                    <li><a href="../Historial del Paciente/paciente/index.php"><i class="fa fa-archive"></i> Historial del Paciente</a></li>
+                    <li><a href="../recetas medicas/recetas.php"><i class="fa fa-file-text-o"></i> Recetas Medicas</a></li>
+                   
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-book"></i><span>Citas Medicas</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../Citas Medicas/agendar cita.php"><i class="fa fa-book"></i> Agendar Cita</a></li>
+                    <li><a href="../Citas Medicas/reprogramar_cita.php"><i class="fa fa-book"></i> Citas Programadas</a></li>
+                    <li><a href="../Citas Medicas/cancelar citas.php"><i class="fa fa-times"></i> Cancelar Citas</a></li>
+                   
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-archive"></i><span>Mensajes</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../mensaje/mensage.php"><i class="fa fa-book"></i> Personal Medico</a></li>
+                    <li><a href="../historial mensaje/historial.php"><i class="fa fa-clock"></i> conversaciones anteriores</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-flask"></i><span>Resultados</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../resultado laboratorios/laboratorios.php"><i class="fa fa-flask"></i> Laboratorios Clinicos</a></li>
+                    
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-credit-card"></i><span>Pagos</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../pagos/factura/factura.php"><i class="fa fa-book"></i> Nueva Factura</a></li>
+                    <li><a href="../Historial de pagos/historial.php"><i class="fa fa-cc-mastercard"></i> Historial de Pagos</a></li>
+                    <li><a href="../pagos/fac_pen/index.php"><i class="fa fa-archive"></i> Facturas Pendientes</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-flask"></i><span>Servicios</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../servicio/servicios.php"><i class="fa fa-book"></i> Imagenes Medicas</a></li>
+                </ul>
+
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-wrench"></i><span>Soporte Tecnico</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../Soporte/tecnico.php"><i class="fa fa-book"></i> Servicio al Cliente</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> Manual del Usuario</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);"><i class="fa fa-cog"></i><span>Configuracion</span></a>
+                <ul class="sub-menu">
+                    <li><a href="../cambio de contraseña/contraseña.php"><i class="fa fa-key"></i> Cambiar Contraseña</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i> Copia de Seguridad</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="Logout"><span>Logout</span></a></li>
+        </ul>
+    </div>
+    <div class="data"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.side-menu li.has-submenu > a');
+        
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    const subMenu = parent.querySelector('.sub-menu');
+                    
+                    // Cierra todos los submenús excepto el seleccionado
+                    closeAllSubMenus(parent);
+        
+                    if (parent.classList.contains('active')) {
+                        // Si el elemento ya está activo, ciérralo
+                        parent.classList.remove('active');
+                        subMenu.style.maxHeight = '0';
+                    } else {
+                        // Si el elemento no está activo, actívalo y abre su submenú
+                        parent.classList.add('active');
+                        const subMenuHeight = subMenu.scrollHeight;
+                        subMenu.style.maxHeight = subMenuHeight + 'px';
+                    }
+                });
+            });
+        
+            // Cierra todos los submenús excepto el seleccionado
+            function closeAllSubMenus(selectedItem) {
+                const allItems = document.querySelectorAll('.side-menu li.has-submenu');
+                allItems.forEach(item => {
+                    const subMenu = item.querySelector('.sub-menu');
+                    if (item !== selectedItem) {
+                        item.classList.remove('active');
+                        subMenu.style.maxHeight = '0';
+                    }
+                });
+            }
+        
+            // Cierra todos los submenús al cargar la página
+            closeAllSubMenus(null);
+        });
+        </script>
+        
+       
+        
+        
+</body>
+</html>

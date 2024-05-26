@@ -1,0 +1,73 @@
+body {
+    background: url('imagenes/fon.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.856);
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    width: 85%; 
+    max-width: 405px; 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    height: auto; 
+    overflow: auto; 
+}
+
+.login-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.form-section {
+    overflow: auto; /* Añadido para permitir el desplazamiento si el contenido es demasiado grande */
+}
+
+h2 {
+   text-align: center; 
+   color: #333; 
+   grid-column: span 2;
+}
+
+label {
+   color: #333; 
+   display: block;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select, textarea {
+   width: 90%;
+   padding: 12px; 
+   margin-bottom: 10px; 
+   border-radius: 5px; 
+   border: 1px solid #ccc;
+}
+
+@media (min-width: 1200px) { /* Para PC */
+    .login-container {
+        width: 80%; /* Ajustar el ancho para PC */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { /* Para tabletas */
+    .login-container {
+        width: 90%; /* Ajustar el ancho para tabletas */
+    }
+}
+
+@media (max-width: 767px) { /* Para móviles */
+    .login-container {
+        width: 90%; /* Ajustar el ancho para móviles */
+        height: auto; /* Ajuste para móviles */
+        .login-container form {
+            grid-template-columns: 1fr; /* Ajustar para móviles */
+        }
+    }
+}
+

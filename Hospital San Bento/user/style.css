@@ -1,0 +1,104 @@
+body {
+    background: url('imagenes/fon.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.856);
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    width: 85%; 
+    max-width: 405px; 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    height: auto; 
+
+  
+
+h2 {
+   text-align:center; 
+   color:#333; 
+}
+
+label {
+   color:#333; 
+   display: block;
+}
+
+input[type="text"], input[type="password"],input[type="email"],input[type="tel"], select{
+   width: 90%;
+   padding:12px; 
+   margin-bottom :10px; 
+   border-radius :5px; 
+   border :1px solid #ccc
+}
+
+input[type="submit"]{
+     background-color:#007BFF; 
+     color:white; 
+     padding :12px 22px ;  
+     border:none ;  
+     cursor:pointer ;
+     display: block;
+     width: 101%;
+}
+
+p {
+    text-align: center;
+    color: #333;
+    margin-top: 15px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+@media (min-width: 1200px) { /* Para PC */
+    .login-container {
+        width: 80%; /* Ajustar el ancho para PC */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { /* Para tabletas */
+    .login-container {
+        width: 90%; /* Ajustar el ancho para tabletas */
+    }
+}
+
+@media (max-width: 767px) { /* Para móviles */
+    .login-container {
+        width: 90%; /* Ajustar el ancho para móviles */
+        height: 35vh; /* Hacer que el contenedor de inicio de sesión se alargue en móviles */
+    }
+}
+.input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon input {
+    padding-left: 30px; /* Espacio para el icono */
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  input[type="button"] {
+    background-color: #FF0000; /* Rojo */
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px; /* Espacio adicional arriba del botón */
+}
